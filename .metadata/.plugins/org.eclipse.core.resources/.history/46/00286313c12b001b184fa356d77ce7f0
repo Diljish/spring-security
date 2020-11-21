@@ -1,0 +1,15 @@
+package com.diljish.coupon.services;
+
+import com.diljish.coupon.repos.UserRepo;
+
+public class UserDetailsServiceImpl implements UserDetailsService {
+	
+	@Auto
+	UserRepo userRepo;
+	
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		return null
+	}
+
+}

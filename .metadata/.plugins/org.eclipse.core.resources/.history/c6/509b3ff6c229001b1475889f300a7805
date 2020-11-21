@@ -1,0 +1,28 @@
+package com.diljish.product.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.diljish.product.model.Product;
+import com.diljish.product.repos.ProductRepo;
+
+@RestController
+@RequestMapping("/productapi")
+public class ProductController {
+	
+	@Autowired
+	ProductRepo productRepo;
+	
+	@Autowired
+	RestTemplate restTemplate;
+	
+	@RequestMapping(value = "/product" , method=RequestMethod.POST )
+	public Product create(@RequestBody Product product) {
+		return productRepo.save(product);
+	}
+
+}

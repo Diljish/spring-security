@@ -1,0 +1,5 @@
+package com.diljish.coupon.model;
+
+public class User {
+
+}

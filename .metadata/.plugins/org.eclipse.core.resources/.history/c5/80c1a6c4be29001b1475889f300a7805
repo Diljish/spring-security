@@ -1,0 +1,5 @@
+package com.diljish.product.model;
+
+public class Product {
+
+}

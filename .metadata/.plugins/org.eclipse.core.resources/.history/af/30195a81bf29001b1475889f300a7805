@@ -1,0 +1,5 @@
+package com.diljish.product.controllers;
+
+public class ProductController {
+
+}
